@@ -1,0 +1,2 @@
+C:\MinGW-w64\mingw64\bin\ar.exe qc ..\libportmidi_s.a  CMakeFiles/portmidi-static.dir/__/pm_win/pmwin.c.obj CMakeFiles/portmidi-static.dir/__/pm_win/pmwinmm.c.obj CMakeFiles/portmidi-static.dir/__/porttime/ptwinmm.c.obj CMakeFiles/portmidi-static.dir/pmutil.c.obj CMakeFiles/portmidi-static.dir/portmidi.c.obj
+C:\MinGW-w64\mingw64\bin\ranlib.exe ..\libportmidi_s.a

@@ -15,12 +15,14 @@
 // Package portmidi provides PortMidi bindings.
 package portmidi
 
-// #cgo CFLAGS:  -I/usr/local/include
-// #cgo LDFLAGS: -lportmidi -L/usr/local/lib
+// #cgo CFLAGS:  -I${SRCDIR}/portmidi/portmidi/portmidi/pm_common
+// #cgo CFLAGS:  -I${SRCDIR}/portmidi/portmidi/porttime
+// #cgo LDFLAGS: ${SRCDIR}/portmidi/pm_mingw/build/libportmidi_s.a
+// #cgo LDFLAGS: -lwinmm
 //
 // #include <stdlib.h>
-// #include <portmidi.h>
-// #include <porttime.h>
+// #include <portmidi/pm_common/portmidi.h>
+// #include <portmidi/porttime/porttime.h>
 import "C"
 
 import (
