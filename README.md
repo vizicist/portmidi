@@ -1,3 +1,16 @@
+# For use in the vizlets project.
+
+If you want to recompile the static library of portmidi,
+cd to portmidi/pm_mingw and do this:
+
+     mkdir build
+     cd build
+     cmake ../.. -G "MinGW Makefiles"
+     mingw32-make portmidi-static
+
+If successful, it will have built libportmidi_s.a
+
+=============================== ORIGINAL README.md =====================================
 # portmidi
 Want to output to an MIDI device or listen your MIDI device as an input? This
 package contains Go bindings for PortMidi. `libportmidi` (v. 217) is required as a dependency, it's available via apt-get and brew.
