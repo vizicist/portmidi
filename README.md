@@ -1,8 +1,8 @@
-# For use in the vizlets project.
+# For use in the viztopia project.
 
-If you want to recompile the static library of portmidi,
-cd to portmidi/pm_mingw and do this:
+If you want to recompile the static library of portmidi, do this:
 
+     cd portmidi/pm_mingw
      mkdir build
      cd build
      cmake ../.. -G "MinGW Makefiles"
