@@ -24,6 +24,7 @@ import "C"
 import (
 	"encoding/hex"
 	"errors"
+	"fmt"
 	"strings"
 	"time"
 	"unsafe"
@@ -56,6 +57,12 @@ type Event struct {
 type Stream struct {
 	deviceID DeviceID
 	pmStream *C.PmStream
+}
+
+func (e Event) Format(f fmt.State, c rune) {
+	s := fmt.Sprintf("portmidi.Event{Timestamp: %d, Status: 0x%02x, Data1: 0x%02x, Data2: 0x%02x}",
+		e.Timestamp, e.Status, e.Data1, e.Data2)
+	f.Write([]byte(s))
 }
 
 // NewInputStream initializes a new input stream.
